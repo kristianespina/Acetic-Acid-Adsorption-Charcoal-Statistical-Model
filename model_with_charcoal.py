@@ -20,9 +20,6 @@ x_train, x_test, y_train, y_test = model_selection.train_test_split(x,y,test_siz
 model = LinearRegression()
 model.fit(x_train, y_train)
 
-print(model.intercept_[0])
-print(model.coef_[0])
-print(model.coef_[1])
 model_filename = 'titration.model'
 pickle.dump(model, open(model_filename, 'wb'))
 
@@ -49,5 +46,9 @@ ax.set_xlabel('Vol Acid')
 ax.set_ylabel('Vol Water')
 ax.set_zlabel('Titrant (with Charcoal)')
 
-print(est.summary())
-plt.show()
+#print(est.summary())
+#plt.show()
+
+print(model.intercept_[0])
+print(model.coef_[0])
+print(model.coef_[1])
