@@ -47,8 +47,8 @@ ax.set_xlabel('Vol Acid')
 ax.set_ylabel('Vol Water')
 ax.set_zlabel('Titrant (No Charcoal)')
 
-#print(est.summary())
-#plt.show()
+print(est.summary())
+plt.show()
 
 print(model.intercept_[0])
 print(model.coef_[0])
